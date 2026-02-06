@@ -19,6 +19,7 @@ const inter = Inter({
 export const metadata = {
   title: "Dr. Maya Reynolds | Psychologist in Santa Monica",
   description: "Licensed Clinical Psychologist specializing in anxiety, trauma, and burnout for high-achievers in Santa Monica, CA.",
+  viewport: "width=device-width, initial-scale=1.0, viewport-fit=cover",
 };
 
 export default function RootLayout({ children }) {
