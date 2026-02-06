@@ -258,7 +258,7 @@ export default function Home() {
           </div>
           
           {/* Image Composition - Responsive */}
-          <div className="order-2 md:order-2 relative w-full px-4 sm:px-6 md:px-0 flex justify-center md:justify-start pb-6 sm:pb-8 md:pb-0 md:-ml-18 lg:-ml-32 xl:-ml-40">
+          <div className="order-2 md:order-2 relative w-full px-4 sm:px-6 md:px-0 flex justify-center md:justify-start pb-6 sm:pb-8 md:pb-0 md:-ml-10 lg:-ml-22 xl:-ml-30">
             {/* Main arched image - Responsive */}
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl aspect-[2/3] shrink-0">
               {/* Main arched image */}
