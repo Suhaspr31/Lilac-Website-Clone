@@ -110,14 +110,14 @@ export default function Home() {
           </div>
           
           {/* Hero Text */}
-          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2 px-2">
+          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2 px-0 md:px-2">
             <span className="text-sage font-bold tracking-widest text-xs uppercase mb-4">
               Santa Monica, CA &bull; Telehealth
             </span>
-            <h1 className="text-3xl md:text-6xl font-serif leading-[1.2] mb-6 md:mb-8 font-bold text-sage-dark">
+            <h1 className="text-3xl md:text-6xl font-serif leading-[1.2] mb-6 md:mb-8 font-bold text-sage-dark pr-2 md:pr-0">
               Therapy for the <br /> <span className="text-sage italic">high-achiever</span> who feels quietly overwhelmed.
             </h1>
-            <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 leading-relaxed font-sans max-w-md">
+            <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 leading-relaxed font-sans max-w-md pr-2 md:pr-0">
               Find relief from anxiety, trauma, and professional burnout. A grounded, evidence-based approach to helping you reconnect with yourself.
             </p>
             <Link href="/contact">
@@ -281,10 +281,10 @@ export default function Home() {
               <div
                 className="
                   absolute
-                  bottom-[-10px] md:bottom-[-100px]
-                  right-[-10px] md:right-[-160px]
-                  w-[120px] md:w-[320px]
-                  h-[120px] md:h-[320px]
+                  bottom-5 md:bottom-[-100px]
+                  right-5 md:right-[-160px]
+                  w-[100px] md:w-[320px]
+                  h-[100px] md:h-[320px]
                   rounded-full
                   overflow-hidden
                   shadow-xl
