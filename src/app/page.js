@@ -93,11 +93,11 @@ export default function Home() {
     <main className="min-h-screen text-[#2D3748] selection:bg-sage selection:text-white overflow-x-hidden">
       
       {/* HERO SECTION - SEO Optimized H1 and location */}
-      <section className="pt-16 pb-8 md:pt-48 md:pb-32 px-4 md:px-12 mx-auto bg-[#E8E6E1]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-24 items-center">
+      <section className="pt-32 pb-12 md:pt-48 md:pb-32 px-6 md:px-12 mx-auto bg-[#E8E6E1]">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Hero Image */}
           <div className="relative order-2 md:order-1 flex justify-center">
-            <div className="relative w-[200px] sm:w-[260px] md:w-[401px] h-[280px] sm:h-[360px] md:h-[660px] overflow-hidden shadow-sm z-10" 
+            <div className="relative w-[451px] md:w-[401px] h-[650px] md:h-[660px] overflow-hidden shadow-sm z-10" 
                                style={{ borderRadius: '300px 300px 0 0' }}>
                              <Image 
                                src={IMAGES.hero}
@@ -110,14 +110,14 @@ export default function Home() {
           </div>
           
           {/* Hero Text */}
-          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2 px-0 md:px-2">
-            <span className="text-sage font-bold tracking-widest text-xs uppercase mb-3 md:mb-4">
+          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2">
+            <span className="text-sage font-bold tracking-widest text-xs uppercase mb-4">
               Santa Monica, CA &bull; Telehealth
             </span>
-            <h1 className="text-xl sm:text-2xl md:text-6xl font-serif leading-[1.2] mb-4 md:mb-8 font-bold text-sage-dark pr-2 md:pr-0">
+            <h1 className="text-4xl md:text-6xl font-serif leading-[1.2] mb-8 font-bold text-sage-dark">
               Therapy for the <br /> <span className="text-sage italic">high-achiever</span> who feels quietly overwhelmed.
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 md:mb-12 leading-relaxed font-sans max-w-md pr-2 md:pr-0">
+            <p className="text-lg text-gray-600 mb-12 leading-relaxed font-sans max-w-md">
               Find relief from anxiety, trauma, and professional burnout. A grounded, evidence-based approach to helping you reconnect with yourself.
             </p>
             <Link href="/contact">
@@ -160,10 +160,10 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             {/* Service 1: Anxiety */}
-            <div className="flex flex-col bg-sand p-6 md:p-12 text-center items-center hover:bg-[#F0EDE6] hover:shadow-lg transition-all duration-300 rounded-sm">
-              <h3 className="text-lg md:text-xl font-serif font-bold mb-4 md:mb-6 text-sage-dark">Anxiety & Panic</h3>
-              <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-6 md:mb-12 flex-grow font-sans">
-                For those who feel "functional" but struggle with constant worry, body tension, or sleep issues. We work to regulate your nervous system.
+            <div className="flex flex-col bg-sand p-8 md:p-12 text-center items-center hover:bg-[#F0EDE6] hover:shadow-lg transition-all duration-300 rounded-sm">
+              <h3 className="text-xl font-serif font-bold mb-6 text-sage-dark">Anxiety & Panic</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-12 flex-grow font-sans">
+                For those who feel &quot;functional&quot; but struggle with constant worry, body tension, or sleep issues. We work to regulate your nervous system.
               </p>
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden mt-auto relative border-4 border-white">
                 <Image src={IMAGES.anxiety} alt="Anxiety Therapy" fill className="object-cover" />
@@ -196,9 +196,9 @@ export default function Home() {
       </section>
 
       {/* SYMPTOMS SECTION - Profile "Functioning on outside" */}
-      <section className="flex flex-col md:grid md:grid-cols-2 min-h-auto md:min-h-[600px] bg-[#E6DFD3]">
+      <section className="grid md:grid-cols-2 min-h-[600px] bg-[#E6DFD3]">
         {/* Left: Image */}
-        <div className="h-[250px] sm:h-[300px] md:h-auto w-full relative">
+        <div className="h-[400px] md:h-auto w-full relative">
           <Image 
             src={IMAGES.alone} 
             alt="Contemplative woman" 
@@ -208,8 +208,8 @@ export default function Home() {
         </div>
         
         {/* Right: Content with Sage Bg */}
-        <div className="bg-sage p-6 sm:p-10 md:p-24 flex flex-col justify-center text-sage-dark">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif mb-6 md:mb-8 leading-tight">
+        <div className="bg-sage p-12 md:p-24 flex flex-col justify-center text-sage-dark">
+          <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
             Safety, stabilization, and regulation.
           </h2>
           
@@ -259,9 +259,9 @@ export default function Home() {
           
           {/* Image Composition */}
           
-          <div className="order-3 md:order-4 relative flex justify-center md:justify-start shrink-0 overflow-visible w-full md:w-auto">
+          <div className="order-3 md:order-4 relative flex justify-center md:justify-start shrink-0">
             {/* LOCKED IMAGE GROUP */}
-            <div className="relative w-[150px] sm:w-[200px] md:w-[441px] h-[225px] sm:h-[300px] md:h-[660px] shrink-0">
+            <div className="relative w-[441px] h-[660px] shrink-0">
 
               {/* Main arched image */}
               <div
@@ -281,10 +281,10 @@ export default function Home() {
               <div
                 className="
                   absolute
-                  bottom-2 sm:bottom-5 md:bottom-[-100px]
-                  right-2 sm:right-5 md:right-[-160px]
-                  w-[60px] sm:w-[100px] md:w-[320px]
-                  h-[60px] sm:h-[100px] md:h-[320px]
+                  bottom-[-100px]
+                  right-[-160px]
+                  w-[320px]
+                  h-[320px]
                   rounded-full
                   overflow-hidden
                   shadow-xl
@@ -342,8 +342,8 @@ export default function Home() {
             </div>
 
             {/* Right: Image Grid */}
-            <div className="order-1 md:order-2 grid grid-cols-2 gap-2 md:gap-4 h-full">
-              <div className="relative h-[200px] sm:h-[250px] md:h-[400px] rounded-tl-[50px] sm:rounded-tl-[80px] md:rounded-tl-[100px] overflow-hidden shadow-lg mt-0 md:mt-12">
+            <div className="grid grid-cols-2 gap-4 h-full">
+              <div className="relative h-[300px] md:h-[400px] rounded-tl-[100px] overflow-hidden shadow-lg mt-12">
                  <Image 
                    src={IMAGES.office1} 
                    alt="Therapy Office Seating" 
@@ -351,7 +351,7 @@ export default function Home() {
                    className="object-cover hover:scale-105 transition-transform duration-700"
                  />
               </div>
-              <div className="relative h-[200px] sm:h-[250px] md:h-[400px] rounded-br-[50px] sm:rounded-br-[80px] md:rounded-br-[100px] overflow-hidden shadow-lg mb-0 md:mb-12">
+              <div className="relative h-[300px] md:h-[400px] rounded-br-[100px] overflow-hidden shadow-lg mb-12">
                  <Image 
                    src={IMAGES.office2} 
                    alt="Office Natural Light" 
@@ -367,10 +367,10 @@ export default function Home() {
       {/* --- END CUSTOM SECTION --- */} 
 
       {/* FAQ SECTION - Specific to Profile */}
-      <section className="py-12 md:py-32 px-4 md:px-12 bg-[#F5F5F0]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
-          <div className="md:col-span-5 relative order-2 md:order-1 w-full flex justify-center md:justify-start">
-            <div className="relative w-[200px] sm:w-[250px] md:w-[401px] h-[250px] sm:h-[312px] md:h-[560px] overflow-hidden shadow-sm z-10" 
+      <section className="py-20 md:py-32 px-6 md:px-12 bg-[#F5F5F0]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-16 items-start">
+          <div className="md:col-span-5 relative order-2 md:order-1">
+            <div className="relative w-[451px] md:w-[401px] h-[450px] md:h-[560px] overflow-hidden shadow-sm z-10" 
                                style={{ borderRadius: '300px 300px 0 0' }}>
                              <Image 
                                src={IMAGES.faq}
