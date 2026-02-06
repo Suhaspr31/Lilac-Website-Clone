@@ -196,9 +196,9 @@ export default function Home() {
       </section>
 
       {/* SYMPTOMS SECTION - Profile "Functioning on outside" */}
-      <section className="grid md:grid-cols-2 min-h-[600px] bg-[#E6DFD3]">
+      <section className="flex flex-col md:grid md:grid-cols-2 min-h-[600px] bg-[#E6DFD3]">
         {/* Left: Image */}
-        <div className="h-[400px] md:h-auto w-full relative">
+        <div className="h-[350px] md:h-auto w-full relative">
           <Image 
             src={IMAGES.alone} 
             alt="Contemplative woman" 
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
         
         {/* Right: Content with Sage Bg */}
-        <div className="bg-sage p-12 md:p-24 flex flex-col justify-center text-sage-dark">
+        <div className="bg-sage p-10 md:p-24 flex flex-col justify-center text-sage-dark">
           <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
             Safety, stabilization, and regulation.
           </h2>
@@ -277,15 +277,14 @@ export default function Home() {
                 />
               </div>
 
-              {/* Inset circle image (GLUED to main image) - Hidden on mobile, shown on desktop */}
+              {/* Inset circle image (GLUED to main image) */}
               <div
                 className="
-                  hidden md:block
                   absolute
-                  bottom-[-100px]
-                  right-[-160px]
-                  w-[320px]
-                  h-[320px]
+                  bottom-[-60px] md:bottom-[-100px]
+                  right-[-40px] md:right-[-160px]
+                  w-[130px] md:w-[320px]
+                  h-[130px] md:h-[320px]
                   rounded-full
                   overflow-hidden
                   shadow-xl
