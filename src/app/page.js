@@ -93,11 +93,11 @@ export default function Home() {
     <main className="min-h-screen text-[#2D3748] selection:bg-sage selection:text-white overflow-x-hidden">
       
       {/* HERO SECTION - SEO Optimized H1 and location */}
-      <section className="pt-32 pb-12 md:pt-48 md:pb-32 px-6 md:px-12 mx-auto bg-[#E8E6E1]">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+      <section className="pt-28 pb-12 md:pt-48 md:pb-32 px-4 md:px-12 mx-auto bg-[#E8E6E1]">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-24 items-center">
           {/* Hero Image */}
           <div className="relative order-2 md:order-1 flex justify-center">
-            <div className="relative w-[280px] md:w-[401px] h-[380px] md:h-[660px] overflow-hidden shadow-sm z-10" 
+            <div className="relative w-[260px] md:w-[401px] h-[360px] md:h-[660px] overflow-hidden shadow-sm z-10" 
                                style={{ borderRadius: '300px 300px 0 0' }}>
                              <Image 
                                src={IMAGES.hero}
@@ -110,14 +110,14 @@ export default function Home() {
           </div>
           
           {/* Hero Text */}
-          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2">
+          <div className="flex flex-col items-start md:pl-8 order-1 md:order-2 px-2">
             <span className="text-sage font-bold tracking-widest text-xs uppercase mb-4">
               Santa Monica, CA &bull; Telehealth
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif leading-[1.2] mb-8 font-bold text-sage-dark">
+            <h1 className="text-3xl md:text-6xl font-serif leading-[1.2] mb-6 md:mb-8 font-bold text-sage-dark">
               Therapy for the <br /> <span className="text-sage italic">high-achiever</span> who feels quietly overwhelmed.
             </h1>
-            <p className="text-lg text-gray-600 mb-12 leading-relaxed font-sans max-w-md">
+            <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 leading-relaxed font-sans max-w-md">
               Find relief from anxiety, trauma, and professional burnout. A grounded, evidence-based approach to helping you reconnect with yourself.
             </p>
             <Link href="/contact">
