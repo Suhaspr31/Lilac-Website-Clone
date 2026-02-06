@@ -90,14 +90,14 @@ export default function Home() {
   const toggleBackground = (index) => setOpenBackground(openBackground === index ? null : index);
 
   return (
-    <main className="min-h-screen text-[#2D3748] selection:bg-sage selection:text-white">
+    <main className="min-h-screen text-[#2D3748] selection:bg-sage selection:text-white overflow-x-hidden">
       
       {/* HERO SECTION - SEO Optimized H1 and location */}
       <section className="pt-32 pb-12 md:pt-48 md:pb-32 px-6 md:px-12 mx-auto bg-[#E8E6E1]">
         <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Hero Image */}
           <div className="relative order-2 md:order-1 flex justify-center">
-            <div className="relative w-full md:w-[401px] h-[400px] md:h-[660px] overflow-hidden shadow-sm z-10" 
+            <div className="relative w-[280px] md:w-[401px] h-[380px] md:h-[660px] overflow-hidden shadow-sm z-10" 
                                style={{ borderRadius: '300px 300px 0 0' }}>
                              <Image 
                                src={IMAGES.hero}
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="flex flex-col bg-sand p-8 md:p-12 text-center items-center hover:bg-[#F0EDE6] hover:shadow-lg transition-all duration-300 rounded-sm">
               <h3 className="text-xl font-serif font-bold mb-6 text-sage-dark">Anxiety & Panic</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-12 flex-grow font-sans">
-                For those who feel functional but struggle with constant worry, body tension, or sleep issues. We work to regulate your nervous system.
+                For those who feel "functional" but struggle with constant worry, body tension, or sleep issues. We work to regulate your nervous system.
               </p>
               <div className="w-48 h-48 rounded-full overflow-hidden mt-auto relative border-4 border-white">
                 <Image src={IMAGES.anxiety} alt="Anxiety Therapy" fill className="object-cover" />
@@ -221,7 +221,7 @@ export default function Home() {
             <li className="pl-2">High internal pressure and perfectionism</li>
             <li className="pl-2">Chronic stress and professional burnout</li>
             <li className="pl-2">Lingering effects of childhood experiences</li>
-            <li className="pl-2">Feeling constantly &quo;braced&quo; for danger</li>
+            <li className="pl-2">Feeling constantly "braced" for danger</li>
             <li className="pl-2">Disconnect from the body and emotions</li>
           </ul>
           
@@ -261,7 +261,7 @@ export default function Home() {
           
           <div className="order-3 md:order-4 relative flex justify-center md:justify-start shrink-0">
             {/* LOCKED IMAGE GROUP */}
-            <div className="relative w-[280px] md:w-[441px] h-[420px] md:h-[660px] shrink-0">
+            <div className="relative w-[200px] md:w-[441px] h-[300px] md:h-[660px] shrink-0">
 
               {/* Main arched image */}
               <div
@@ -277,14 +277,15 @@ export default function Home() {
                 />
               </div>
 
-              {/* Inset circle image (GLUED to main image) */}
+              {/* Inset circle image (GLUED to main image) - Hidden on mobile, shown on desktop */}
               <div
                 className="
+                  hidden md:block
                   absolute
-                  bottom-[-50px] md:bottom-[-100px]
-                  right-[-50px] md:right-[-160px]
-                  w-[140px] md:w-[320px]
-                  h-[140px] md:h-[320px]
+                  bottom-[-100px]
+                  right-[-160px]
+                  w-[320px]
+                  h-[320px]
                   rounded-full
                   overflow-hidden
                   shadow-xl
@@ -343,7 +344,7 @@ export default function Home() {
 
             {/* Right: Image Grid */}
             <div className="grid grid-cols-2 gap-4 h-full">
-              <div className="relative h-[300px] md:h-[400px] rounded-tl-[100px] overflow-hidden shadow-lg mt-12">
+              <div className="relative h-[300px] md:h-[400px] rounded-tl-[100px] md:rounded-tl-[100px] overflow-hidden shadow-lg mt-12">
                  <Image 
                    src={IMAGES.office1} 
                    alt="Therapy Office Seating" 
@@ -351,7 +352,7 @@ export default function Home() {
                    className="object-cover hover:scale-105 transition-transform duration-700"
                  />
               </div>
-              <div className="relative h-[300px] md:h-[400px] rounded-br-[100px] overflow-hidden shadow-lg mb-12">
+              <div className="relative h-[300px] md:h-[400px] rounded-br-[100px] md:rounded-br-[100px] overflow-hidden shadow-lg mb-12">
                  <Image 
                    src={IMAGES.office2} 
                    alt="Office Natural Light" 
@@ -370,7 +371,7 @@ export default function Home() {
       <section className="py-20 md:py-32 px-6 md:px-12 bg-[#F5F5F0]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-16 items-start">
           <div className="md:col-span-5 relative order-2 md:order-1">
-            <div className="relative w-full md:w-[401px] h-[350px] md:h-[560px] overflow-hidden shadow-sm z-10" 
+            <div className="relative w-[280px] md:w-[401px] h-[350px] md:h-[560px] overflow-hidden shadow-sm z-10" 
                                style={{ borderRadius: '300px 300px 0 0' }}>
                              <Image 
                                src={IMAGES.faq}
