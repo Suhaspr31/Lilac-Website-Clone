@@ -1,30 +1,41 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY + window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      
-      // Show footer when user is within 100px of the bottom
-      if (scrollTop >= docHeight - 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Fade in when footer enters viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      {
+        threshold: 0.50, // Trigger when 5% of footer is visible
+        rootMargin: '50px', // Start triggering 50px before footer enters viewport
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <footer className={`text-[#2e3d25] font-sans transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <footer ref={footerRef} className={`text-[#2e3d25] font-sans transition-opacity duration-700 will-change-opacity ${isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
       {/* Top Section - Light Background */}
       <div className="bg-[#fcfaf6] py-12 sm:py-20 md:py-35 px-4 sm:px-6 md:px-12 lg:px-57">
         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
