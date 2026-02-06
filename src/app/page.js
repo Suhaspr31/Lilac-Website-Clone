@@ -259,7 +259,7 @@ export default function Home() {
           
           {/* Image Composition */}
           
-          <div className="order-3 md:order-4 relative flex justify-center md:justify-start shrink-0">
+          <div className="order-3 md:order-4 relative flex justify-center md:justify-start shrink-0 overflow-visible">
             {/* LOCKED IMAGE GROUP */}
             <div className="relative w-[200px] md:w-[441px] h-[300px] md:h-[660px] shrink-0">
 
@@ -281,10 +281,10 @@ export default function Home() {
               <div
                 className="
                   absolute
-                  bottom-[-60px] md:bottom-[-100px]
-                  right-[-40px] md:right-[-160px]
-                  w-[130px] md:w-[320px]
-                  h-[130px] md:h-[320px]
+                  bottom-[-10px] md:bottom-[-100px]
+                  right-[-10px] md:right-[-160px]
+                  w-[120px] md:w-[320px]
+                  h-[120px] md:h-[320px]
                   rounded-full
                   overflow-hidden
                   shadow-xl
